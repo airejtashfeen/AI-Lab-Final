@@ -1,13 +1,12 @@
 def is_safe(board, row, col):
     for i in range(row):
-        # Check columns and diagonals
-        if board[i] == col or abs(board[i] - col) == abs(i - row):
+        if board[i]==col or abs(board[i]-col)== abs(i-row):
             return False
     return True
 
 def solve_n_queens(board, row):
 #Backtracking
-    if row == 4:
+    if row == len(board):
         # All queens placed
         return True
 

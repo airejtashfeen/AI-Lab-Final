@@ -12,7 +12,7 @@ female(emily).
 
 % Rules
 ancestor(X, Y) :- parent(X, Y).              % Rule 1: Direct parent
-ancestor(X, Y) :- parent(X, Z), ancestor(Z, Y). % Rule 2: Recursive ancestor
+ancestor(X,Y):- ancestor(Z,Y),parent(X,Z).
 
 % Modus Ponens
 % If someone is a parent, they are also an ancestor.
