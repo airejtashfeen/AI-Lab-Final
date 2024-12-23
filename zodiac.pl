@@ -12,9 +12,9 @@ zodiac(10, 23, 11, 'Scorpio').
 zodiac(11, 23, 12, 'Sagittarius').
 zodiac(12, 22, 1, 'Carpicorn').
 
-find_zodiac(Date, Month, ZodiacSign) :-
+find_zodiac(Date, Month, ZodiacSign):-
     zodiac(Month, StartDate, EndDate, ZodiacSign),
-    (Date >= StartDate; Date =< EndDate).
+    (Date>=StartDate; Date=<EndDate).
 
 start :-
     write('Enter the day of the month: '),
@@ -24,4 +24,3 @@ start :-
     (find_zodiac(Date, Month, ZodiacSign) -> 
         write('your zodiac sign is: '), write(ZodiacSign), nl;
         write('Invalid date or month.'), nl).
-
