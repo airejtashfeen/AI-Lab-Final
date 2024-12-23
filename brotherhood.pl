@@ -22,4 +22,3 @@ uncle(Uncle, Person) :-
     parent(Parent, Person),  % Find the parent of the person
     brother(Uncle, Parent).  % Check if someone is a brother of that parent
 
-
